@@ -10,9 +10,9 @@ source:
   sha256: 98d860899b8f4c58d6720d4a62f4690139ac1504ca909271d9d84ae1246c002c
 
 build:
-  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
@@ -35,9 +35,10 @@ test:
 
 about:
   home: https://airflow.apache.org/
-  summary: Provider for Pagerduty for Apache Airflow
+  summary: Provider for Apache Airflow. Implements apache-airflow-providers-pagerduty package
   license: Apache-2.0
   license_file: LICENSE
+  license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-pagerduty/stable/index.html
   dev_url: https://github.com/apache/airflow/
 
