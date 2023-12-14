@@ -1,13 +1,13 @@
 {% set name = "apache-airflow-providers-pagerduty" %}
-{% set version = "3.4.0" %}
+{% set version = "3.5.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-pagerduty-{{ version }}.tar.gz
-  sha256: b4644f2baa2c0abefb066a83ab36e2fd27dc692a2401dbd8773cee42415e03d8
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 8afd1986fcde60630cb69a3509f5d79160ad2be098fbd2c55f9d818b469c6601
 
 build:
   noarch: python
@@ -16,30 +16,27 @@ build:
 
 requirements:
   host:
-    - python >=3.8
-    - setuptools >=67.2.0,<68.0.0
+    - python >=3.8,<4.dev0
+    - flit-core >=3.2,<4
     - pip
   run:
     - python >=3.8
-    - apache-airflow >=2.5.0
+    - apache-airflow >=2.6.0
     - pdpyras >=4.1.2
 
 test:
   imports:
     - airflow.providers.pagerduty
-    - airflow.providers.pagerduty.hooks
   commands:
     - pip check
   requires:
     - pip
 
 about:
-  home: https://airflow.apache.org/
-  summary: Provider for Apache Airflow. Implements apache-airflow-providers-pagerduty package
+  home: https://github.com/apache/airflow/
+  summary: Provider package apache-airflow-providers-pagerduty for Apache Airflow
   license: Apache-2.0
-  license_file:
-    - LICENSE
-    - NOTICE
+  license_file: airflow/providers/pagerduty/LICENSE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-pagerduty/stable/index.html
   dev_url: https://github.com/apache/airflow/
