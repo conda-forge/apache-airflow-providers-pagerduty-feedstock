@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_pagerduty-{{ version }}.tar.gz
   sha256: 60424cedeffa2300de3ddbae30787755cd8dd7877b5f944a9231e026dcba45da
 
 build:
