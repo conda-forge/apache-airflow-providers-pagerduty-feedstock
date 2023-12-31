@@ -1,13 +1,13 @@
 {% set name = "apache-airflow-providers-pagerduty" %}
-{% set version = "3.5.0" %}
+{% set version = "3.5.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 8afd1986fcde60630cb69a3509f5d79160ad2be098fbd2c55f9d818b469c6601
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_pagerduty-{{ version }}.tar.gz
+  sha256: 60424cedeffa2300de3ddbae30787755cd8dd7877b5f944a9231e026dcba45da
 
 build:
   noarch: python
