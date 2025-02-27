@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-pagerduty" %}
-{% set version = "4.0.0" %}
+{% set version = "4.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_pagerduty-{{ version }}.tar.gz
-  sha256: ca2679b3657b28d52421aa8efce731d6f9ac3bb97a3753b83b2d61c74944994f
+  sha256: 620b51c351565e4e5c805d19c10a2bfeca6638001532784299e8bbeddb3d8a41
 
 build:
   noarch: python
@@ -37,7 +37,7 @@ about:
   home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-pagerduty for Apache Airflow
   license: Apache-2.0
-  license_file: airflow/providers/pagerduty/LICENSE
+  license_file: src/airflow/providers/pagerduty/LICENSE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-pagerduty/stable/index.html
   dev_url: https://github.com/apache/airflow/
