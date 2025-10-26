@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-pagerduty" %}
-{% set version = "5.0.2" %}
+{% set version = "5.1.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_pagerduty-{{ version }}.tar.gz
-  sha256: 0c33c25a75b978209a5adc1d59bcbfb6c877f85090507adc26f1bc00c2a699ff
+  sha256: e93686b9bd053ed8361b2949315885236cacecbca2ac1d5f7adc6bf45a9a456b
 
 build:
   noarch: python
@@ -21,9 +21,10 @@ requirements:
     - flit-core ==3.12.0
     - pip
   run:
+    - apache-airflow-providers-http
     - python >={{ python_min }}
     - apache-airflow >=2.10.0
-    - apache-airflow-providers-common-compat >=1.6.1
+    - apache-airflow-providers-common-compat >=1.8.0
     - pagerduty >=2.3.0
 
 test:
