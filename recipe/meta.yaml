@@ -1,6 +1,5 @@
 {% set name = "apache-airflow-providers-pagerduty" %}
 {% set version = "5.1.1" %}
-{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -40,7 +39,9 @@ about:
   home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-pagerduty for Apache Airflow
   license: Apache-2.0
-  license_file: src/airflow/providers/pagerduty/LICENSE
+  license_file:
+    - LICENSE
+    - NOTICE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-pagerduty/stable/index.html
   dev_url: https://github.com/apache/airflow/
