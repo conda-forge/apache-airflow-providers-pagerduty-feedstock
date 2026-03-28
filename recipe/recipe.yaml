@@ -26,6 +26,7 @@ requirements:
     - apache-airflow-providers-common-compat >=1.10.1
     - apache-airflow-providers-http
     - pagerduty >=2.3.0
+
 tests:
   - python:
       imports:
