@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-pagerduty
-  version: 5.2.3
+  version: "5.2.4"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_pagerduty-${{ version }}.tar.gz
-  sha256: e67b89c5e1ed24662435ba57e6fdcd315aea21b9dc78cbad6d87a5d5abb4330b
+  sha256: 330f2112305880a3e6700cb81a8c2d95eba3f96a3c5776e905f434765bcca0da
 
 build:
   noarch: python
@@ -26,6 +26,7 @@ requirements:
     - apache-airflow-providers-common-compat >=1.10.1
     - apache-airflow-providers-http
     - pagerduty >=2.3.0
+
 tests:
   - python:
       imports:
