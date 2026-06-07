@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-pagerduty
-  version: "5.2.5"
+  version: "5.2.6"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_pagerduty-${{ version }}.tar.gz
-  sha256: 01f80c8fbd1a3c241239fdda7938aeea5316af67c675e3a8720a55158c4e7f46
+  sha256: 0737e5cf8dbf2ef050dca8411ae690f146c0ed371703a3fa2caccddf3cf46d8f
 
 build:
   noarch: python
